@@ -1,0 +1,20 @@
+const path = require("path");
+
+module.exports = function override(config, env) {
+  config.resolve = {
+    ...config.resolve,
+    alias: {
+      ...config.resolve.alias,
+      src: path.resolve(__dirname, "./src/"),
+      component: path.resolve(__dirname, "./src/component/"),
+      data: path.resolve(__dirname, "./src/data/"),
+      service: path.resolve(__dirname, "./src/service/"),
+      layout: path.resolve(__dirname, "./src/layout/"),
+      page: path.resolve(__dirname, "./src/page/"),
+      public: path.resolve(__dirname, "./public/"),
+    },
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".d.ts"],
+  };
+
+  return config;
+};
