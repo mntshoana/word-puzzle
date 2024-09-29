@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  max-height: 20dvh;
+
+  z-index: 1000;
+  color: white;
+  background-color: #333;
+  width: 100%;
+}
+
+.container div {
+  margin: 0 auto;
+  max-width: 50%;
+  min-width: 25%;
+  text-align: left;
+  font-family: "Sans";
+}
+.container div p,
+.container div span {
+  height: 20px;
+  font-size: 0.9em;
+}
+.heart {
+  color: rgb(169, 21, 31);
+  font-size: 1.4em;
+  position: relative;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(214, 214, 214);
+}
+
+.city {
+  padding-left: 18px;
+}
