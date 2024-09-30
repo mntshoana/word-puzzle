@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  margin: 0px auto 50px auto;
+
+  width: 100%;
+
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+.button {
+  margin: 70px auto;
+}
