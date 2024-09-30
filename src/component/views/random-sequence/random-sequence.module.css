@@ -15,14 +15,11 @@
   color: rgb(7, 48, 66);
 }
 
-.word_count_input {
+.random_sequence_input {
   width: calc(80%);
   margin: 0 auto;
 }
-.slider {
-  width: 80%;
-  margin: 0 auto;
-}
+
 .button {
   margin: 70px auto;
 }

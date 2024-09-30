@@ -1,7 +1,7 @@
+import NumberInputComponent from "component/input/number/number";
+import SliderComponent from "component/slider/slider";
 import { useNavigate } from "react-router-dom";
 import ButtonComponent from "src/component/button/button";
-import NumberInputComponent from "../input/number/number";
-import SliderComponent from "../slider/slider";
 import css from "./generator.module.css";
 
 const AppGeneratorComponent = () => {

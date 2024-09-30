@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AppGeneratorComponent from "src/component/generator/generator";
-import AppRandomSequenceComponent from "src/component/random-sequence/random-sequence";
+import AppGeneratorComponent from "src/component/views/generator/generator";
+import AppRandomSequenceComponent from "src/component/views/random-sequence/random-sequence";
 import css from "./home.module.css";
 
 const AppLandingPage = () => {
-  const [selected, setSelected] = useState(1);
+  const [selected, setSelected] = useState(0);
   const tabs = [
     { id: 0, name: "Generator", component: <AppGeneratorComponent /> },
     {
