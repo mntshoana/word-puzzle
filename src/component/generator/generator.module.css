@@ -1,13 +1,28 @@
 .container {
   display: flex;
+  flex-direction: column;
   margin: 0px auto 50px auto;
-
+  padding: 30px 0 60px 0;
   width: 100%;
 
   box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
 
+.container h2 {
+  font-size: 1.3em;
+  margin: 20px 0 20px 9%;
+  color: rgb(7, 48, 66);
+}
+
+.word_count_input {
+  width: calc(80%);
+  margin: 0 auto;
+}
+.slider {
+  width: 80%;
+  margin: 0 auto;
+}
 .button {
   margin: 70px auto;
 }

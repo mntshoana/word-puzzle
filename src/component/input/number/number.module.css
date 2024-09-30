@@ -1,0 +1,22 @@
+.textBox {
+  border-radius: 10px;
+  border: 0.4px solid black;
+  width: 100%;
+
+  font-size: 1.5em;
+}
+
+.textBox:hover {
+  border: 0.4px solid rgb(86, 152, 159);
+}
+
+.valid {
+  border: 0.4px solid rgb(57, 109, 57);
+}
+.invalid {
+  border: 0.4px solid rgb(171, 11, 11);
+}
+
+.texBoxt:focus {
+  border: 0.4px solid rgba(86, 152, 159, 0.3);
+}
