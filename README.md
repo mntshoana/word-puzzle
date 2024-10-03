@@ -21,7 +21,7 @@ Ensure you have the following installed on your machine:
 To clone the repository, run the following commands in your terminal:
 
 ```bash
-git clone https://github.com/yourusername/word-app.git
+git clone git@github.com:mntshoana/word-puzzle.git
 cd word-app
 ```
 
