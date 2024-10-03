@@ -1,20 +1,26 @@
+import AppGeneratorComponent from "component/views/generator/generator";
+import AppHistoryComponent from "component/views/history/history";
+import AppRandomSequenceComponent from "component/views/random-sequence/random-sequence";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import AppGeneratorComponent from "src/component/views/generator/generator";
-import AppRandomSequenceComponent from "src/component/views/random-sequence/random-sequence";
 import css from "./home.module.css";
+
+interface AppLandingPageTabItems {
+  id: number;
+  name: string;
+  component: React.ReactElement;
+}
 
 const AppLandingPage = () => {
   const [selected, setSelected] = useState(0);
-  const tabs = [
+  const tabs: AppLandingPageTabItems[] = [
     { id: 0, name: "Generator", component: <AppGeneratorComponent /> },
     {
       id: 1,
       name: "Random Sequence",
       component: <AppRandomSequenceComponent />,
     },
+    { id: 2, name: "History", component: <AppHistoryComponent /> },
   ];
-  const reroute = useNavigate();
 
   return (
     <main className={css.main}>
@@ -23,6 +29,7 @@ const AppLandingPage = () => {
           <ul>
             {tabs.map((tab, index) => (
               <li
+                key={index}
                 className={`${
                   selected === index ? css.selected_tab : css.non_selected_tab
                 }`}

@@ -1,5 +1,7 @@
-import { useState } from "react";
+import shared from "component/input/input.module.css";
+import { useEffect, useRef, useState } from "react";
 import css from "./text.module.css";
+
 interface InputProps {
   value: string;
   placeholder?: string;
@@ -17,9 +19,32 @@ interface InputProps {
 }
 
 const TextInputComponent = (props: InputProps) => {
-  const [isValid, setIsValid] = useState<boolean | null>(null);
-  const [message, setMessage] = useState<string>("");
+  const [value, setValue] = useState<string>(props.value);
+  const inputRef = useRef<HTMLInputElement>(null);
 
+  const [isValid, setIsValid] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    updateColor(props.error ? false : true);
+  }, [props.error]);
+
+  const updateColor = (override?: boolean) => {
+    const current = override ?? isValid;
+    if (inputRef.current && current !== null) {
+      if (current) {
+        inputRef.current.classList.remove(shared.inputBoxInvalid);
+        inputRef.current.classList.add(shared.inputBoxValid);
+      } else {
+        inputRef.current.classList.remove(shared.inputBoxValid);
+        inputRef.current.classList.add(shared.inputBoxInvalid);
+      }
+    }
+  };
+
+  const onChange = (val: string) => {
+    props.onChange(val);
+    setValue(val);
+  };
   const validate = (val: string) => {
     if (
       !props.regex &&
@@ -30,51 +55,40 @@ const TextInputComponent = (props: InputProps) => {
     ) {
       return;
     }
-
+    let current = true;
     if (props.onBlur) props.onBlur(val);
 
     if (props.error && props.error.length > 0) {
-      setIsValid(false);
-      if (props.onValidate) props.onValidate(false);
-      return;
+      current = false;
     }
 
     if (props.regex) {
-      setIsValid(props.regex.test(val));
+      current = props.regex.test(val);
     }
 
-    if (isValid) {
-      // show warning
-      // else show ok
-    } else {
-      // create and show error
-    }
-    if (props.onValidate) props.onValidate(isValid);
+    if (props.onValidate) props.onValidate(current);
+    setIsValid(current);
+    updateColor(current);
   };
 
   return (
     <>
       <input
-        className={`${css.textBox} ${props.className}`}
-        style={
-          isValid === true
-            ? {
-                border: "1.2px solid rgb(57, 109, 57)",
-              }
-            : isValid === false
-            ? {
-                border: "1.2px solid rgb(171, 11, 11)",
-              }
-            : {}
-        }
-        value={props.value}
-        onChange={(val) => props.onChange(val.target.value)}
+        ref={inputRef}
+        className={`${shared.inputBox} ${props.className || ""}`}
+        value={value}
+        onChange={(val) => onChange(val.target.value)}
         onBlur={(val) => validate(val.target.value)}
         placeholder={props?.placeholder}
         disabled={props?.disabled}
         type="text"
       />
-      {message.length > 0 && <label>{message}</label>}
+      {props.error && (
+        <label className={`${shared.error} ${css.error}`}>{props?.error}</label>
+      )}
+      {props.warn && (
+        <label className={`${shared.warn} ${css.warn}`}>{props?.warn}</label>
+      )}
     </>
   );
 };

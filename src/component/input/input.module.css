@@ -1,0 +1,89 @@
+.inputBox {
+  border-bottom: 0.4px solid black;
+  width: 80%;
+  padding-left: 15px;
+  font-size: 1.4em;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.valid {
+  border: 0.4px solid rgb(57, 109, 57);
+}
+.invalid {
+  border: 0.4px solid rgb(171, 11, 11);
+}
+
+.inputBox:focus {
+  border: 0.4px solid rgba(86, 152, 159, 0.3);
+}
+
+.warn {
+  color: rgb(113, 113, 113);
+}
+
+.error {
+  color: rgb(171, 11, 11);
+}
+
+.inputBoxValid:focus,
+.inputBoxInvalid:focus {
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.inputBoxValid:focus {
+  box-shadow: 0 2px 2px rgba(62, 126, 64, 0.2);
+  border-bottom: 2px solid rgb(19, 89, 19);
+  animation: borderColorChange 3s forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 0.1s;
+}
+
+.inputBoxInvalid:focus {
+  animation: invalidBorderColorChange 3s forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 0.1s;
+}
+
+@keyframes borderColorChange {
+  0% {
+    border-bottom: 1.5px solid rgb(19, 89, 19);
+  }
+  25% {
+    border-bottom: 1.5px solid rgb(40, 130, 40);
+  }
+  75% {
+    border-bottom: 1.5px solid rgb(123, 130, 40);
+  }
+  100% {
+    border-bottom: 1.5px solid rgb(19, 89, 19);
+  }
+}
+
+@keyframes invalidBorderColorChange {
+  0% {
+    border-bottom: 1.5px solid rgb(89, 19, 19);
+  }
+  25% {
+    border-bottom: 1.5px solid rgb(130, 40, 40);
+  }
+  75% {
+    border-bottom: 1.5px solid rgb(130, 123, 40);
+  }
+  100% {
+    border-bottom: 1.5px solid rgb(89, 19, 19);
+  }
+}
+
+.inputBoxValid {
+  border-bottom: 1.2px solid rgb(57, 109, 57);
+}
+
+.inputBoxInvalid {
+  border-bottom: 1.2px solid rgb(171, 11, 11);
+}

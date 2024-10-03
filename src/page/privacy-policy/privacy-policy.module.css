@@ -1,0 +1,29 @@
+.main {
+  margin: 30px auto 60px auto;
+  width: 85%;
+}
+.h1 {
+  padding: 10px 20px;
+  font-size: 1.6em;
+}
+.h1:first-letter {
+  color: rgba(140, 60, 75, 0.8);
+  font-size: 1.69em;
+}
+.h3 {
+  padding: 0 30px;
+  color: rgb(47, 36, 56);
+  font-size: 1.14em;
+  font-weight: 650;
+}
+
+.p {
+  margin: 0 40px;
+  font-size: 0.95em;
+  font-family: Helvetica, sans-serif;
+}
+.bold {
+  color: rgba(60, 5, 4, 0.96);
+  font-size: 1em;
+  font-weight: 800;
+}

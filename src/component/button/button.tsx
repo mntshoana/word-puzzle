@@ -9,10 +9,7 @@ interface ButtonProps {
 const ButtonComponent = (props: ButtonProps) => {
   return (
     <button
-      className={
-        `${css.button} ` +
-        `${props.className ?? ""}`
-      }
+      className={`${css.button} ` + `${props.className ?? ""}`}
       disabled={props?.disabled ?? false}
       onClick={() => props?.onClick()}
     >

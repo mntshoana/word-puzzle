@@ -1,0 +1,39 @@
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 10000;
+}
+
+.spinner_container {
+  display: block;
+  margin: calc(50dvh - 150px) auto;
+  width: 100px;
+  height: 100px;
+  animation: spin 10s linear infinite;
+}
+.spinner {
+  display: block;
+  align-items: center;
+  content: url("public/images/png/spinner.png");
+  --side: 70px;
+  padding-left: calc(39px);
+  padding-bottom: 20px;
+  width: var(--side);
+  height: var(--side);
+  max-width: var(--side);
+  max-height: var(--side);
+  user-select: none;
+}
+.spinner_text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  user-select: none;
+}

@@ -1,0 +1,9 @@
+.toaster {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 400px;
+  height: 100px;
+  left: calc(50dvw - 200px);
+  z-index: 2000;
+}

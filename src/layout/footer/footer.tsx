@@ -4,7 +4,7 @@ const AppFooter = () => {
   return (
     <footer className={css.container}>
       <div className="col-md-6">
-        <p>&copy; 2023 - (MN Tshoana)</p>
+        <p>&copy; 2024 - MN Tshoana</p>
         <p>0683189880</p>
         <p>
           <a href="/privacy">Privacy Policy</a>

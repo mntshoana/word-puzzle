@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 50px auto;
+  padding-top: 5px;
+  width: 100%;
+
+  box-shadow: 0.1px 0.2px 0.1px 0.1px rgba(100, 98, 98, 0.643);
+
+  border-radius: 1px;
+}
+.entry_container {
+  display: flex;
+  margin: 5px auto 30px auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.textGen {
+  text-align: left;
+  margin: 20px 0 0 0;
+  font-weight: 500;
+  font-size: 1.2em;
+  font-family: monospace;
+  text-transform: capitalize;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.entry_result {
+  margin-left: 40px;
+}
+
+.word_count_title {
+  font-size: 0.9em;
+  margin: 20px 0 20px 1%;
+}

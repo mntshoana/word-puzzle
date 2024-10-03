@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Generator by Word Gen
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We are thrilled to introduce **Generator**, an innovative word puzzle application. Our enthusiasm for creating this app stems from our love for challenging and fun puzzles. **Generator** allows you to generate a random sequence of letters that can be rearranged to spell numbers from zero to ten. Additionally, it can analyze a given string to determine how many times each number (zero through ten) can be formed. Dive into the world of word puzzles and enhance your problem-solving skills with **Generator**!
 
-## Available Scripts
+Included, you may currently:
 
-In the project directory, you can run:
+1. Generating a random sequence of letters that can be rearranged to spell the numbers zero through ten.
+2. Solving a given string to find how many "zero", "one", "two", ..., "ten" can be formed from the sequence.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ensure you have the following installed on your machine:
 
-### `npm test`
+- [Node.js](https://nodejs.org/) (which includes npm)
+- [Git](https://git-scm.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cloning the Repository
 
-### `npm run build`
+To clone the repository, run the following commands in your terminal:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/yourusername/word-app.git
+cd word-app
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installing Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Navigate to the project directory and install the required dependencies:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Note: this uses a proxied backend
+Install for the proxy depencencies as well
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd proxy
+npm install
+cd ..
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To start the application, use the following command:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Note: this uses a proxied backend
+Run the proxy
 
-### Code Splitting
+```bash
+cd proxy
+node ./proxy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Running Tests
 
-### Analyzing the Bundle Size
+To run the tests, use the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm test
+```
 
-### Making a Progressive Web App
+This will launch the test runner in interactive watch mode.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Building for Production
 
-### Advanced Configuration
+To create a production build, use the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run build
+```
 
-### Deployment
+This will create an optimized build of the app in the `build` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Additional Resources
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For more information on how to work with React, check out the [React documentation](https://reactjs.org/).

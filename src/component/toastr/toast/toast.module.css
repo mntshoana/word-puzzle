@@ -1,0 +1,22 @@
+.toast {
+  background-color: #333;
+  color: white;
+  padding: 15px 25px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #3b3b3b1a;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+
+.toast.info {
+  background-color: #87a1be;
+}
+
+.toast.success {
+  background-color: #3e9d54;
+}
+
+.toast.error {
+  background-color: #c62a3a;
+}

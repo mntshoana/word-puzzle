@@ -9,11 +9,11 @@ const AppHeader = () => {
             <span className={css.tiny_little_t}>W</span>ord <br />{" "}
             <span className={css.tiny_little_l}>G</span>en <br />{" "}
           </h1>
+          <div className={css.generator_text_container}>
+            <span className={css.generator_text}>Generator</span>
+            <br />
+          </div>
         </a>
-        <div className={css.generator_text_container}>
-          <span className={css.generator_text}>Generator</span>
-          <br />
-        </div>
       </div>
     </main>
   );

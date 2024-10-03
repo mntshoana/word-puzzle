@@ -1,3 +1,4 @@
+import { ToasterProvider } from "component/toastr/toastr.service";
 import AppFooter from "layout/footer/footer";
 import AppHeading from "layout/header/header";
 import { useEffect } from "react";
@@ -17,9 +18,11 @@ const Layout = () => {
   }, []);
   return (
     <>
-      <AppHeading />
-      <Outlet />
-      <AppFooter />
+      <ToasterProvider>
+        <AppHeading />
+        <Outlet />
+        <AppFooter />
+      </ToasterProvider>
     </>
   );
 };
