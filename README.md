@@ -33,15 +33,6 @@ Navigate to the project directory and install the required dependencies:
 npm install
 ```
 
-Note: this uses a proxied backend
-Install for the proxy depencencies as well
-
-```bash
-cd proxy
-npm install
-cd ..
-```
-
 ### Running the Application
 
 To start the application, use the following command:
@@ -50,15 +41,7 @@ To start the application, use the following command:
 npm start
 ```
 
-This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-Note: this uses a proxied backend
-Run the proxy
-
-```bash
-cd proxy
-node ./proxy
-```
+This will run the app in development mode (typically on port 3000). Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Running Tests
 

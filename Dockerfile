@@ -8,6 +8,4 @@ RUN apk add nodejs npm
 WORKDIR /app
 
 # Copy the package.json and package-lock.json files to the working directory
-COPY ./build ./
-COPY ./proxy ./proxy
-RUN cd proxy && npm install
+COPY ./build .

@@ -5,16 +5,7 @@ services:
       context: ./
     container_name: d1-web
     ports:
-    - "3002:3002"
+    - "3001:3001"
     environment:
     - NODE_ENV=production
-    command: npx serve -s ./ -l 3002
-  d1-proxy:
-    build:
-      context: ./
-    container_name: d1-proxy
-    ports:
-    - "3000:3000"
-    environment:
-    - NODE_ENV=production
-    command: node proxy/proxy.js
+    command: npx serve -s ./ -l 3001

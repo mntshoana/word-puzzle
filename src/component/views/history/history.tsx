@@ -78,6 +78,9 @@ const AppHistoryComponent = () => {
             {renderWordEntry(item)}
           </div>
         ))}
+      {historyData.length === 0 && (
+        <p className={css.no_history}>No history found</p>
+      )}
     </div>
   );
 };

@@ -33,3 +33,10 @@
   font-size: 0.9em;
   margin: 20px 0 20px 1%;
 }
+
+.no_history {
+  margin-left: 10%;
+  font-size: 1.5em;
+  margin-top: 50px;
+  color: rgb(7, 48, 66);
+}
